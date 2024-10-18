@@ -94,17 +94,76 @@ char nome[100];
     printf("Endereço: %s", endereco);
     printf("Telefone: %s", telefone);
 
-
 }
 
 //8. Faça um programa que leia dois números inteiros e imprima a
 //   subtração deles.
 
+void q8() {
+
+    int num1, num2, resultado;
+
+    // Leitura dos números
+    printf("Digite o primeiro número inteiro: ");
+    scanf("%d", &num1);
+
+    printf("Digite o segundo número inteiro: ");
+    scanf("%d", &num2);
+
+    // Cálculo da subtração
+    resultado = num1 - num2;
+
+    // Impressão do resultado
+    printf("Resultado da subtração: %d\n", resultado);
+
+
+}
+
 //9. Faça um programa que leia umnúmero real e imprima ¼ deste número.
+
+void q9() {
+
+float numero, resultado;
+
+    // Leitura do número real
+    printf("Digite um número real: ");
+    scanf("%f", &numero);
+
+    // Cálculo de ¼ do número
+    resultado = numero / 4;
+
+    // Impressão do resultado
+    printf("Um quarto de %.2f é %.2f\n", numero, resultado);
+
+}
 
 //10. Faça um programa que leia três números reais e calcule a
 //    média aritmética destes números. Ao final, o programa deve
 //    imprimir o resultado do cálculo.
+
+void q10 () {
+
+float num1, num2, num3, media;
+
+    // Leitura dos três números reais
+    printf("Digite o primeiro número real: ");
+    scanf("%f", &num1);
+
+    printf("Digite o segundo número real: ");
+    scanf("%f", &num2);
+
+    printf("Digite o terceiro número real: ");
+    scanf("%f", &num3);
+
+    // Cálculo da média aritmética
+    media = (num1 + num2 + num3) / 3;
+
+    // Impressão do resultado
+    printf("A média aritmética é: %.2f\n", media);
+
+
+
+}
 
 //11. Faça um programa que leia dois números reais e calcule as
 //    quatro operações básicas entre estes dois números, adição,
@@ -162,6 +221,6 @@ char nome[100];
 
 
 int main() {
-q7();
+q10();
     return EXIT_SUCCESS;
 }
