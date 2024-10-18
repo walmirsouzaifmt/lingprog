@@ -54,8 +54,48 @@ void q5() {
 //6. Faça um programa que leia um número inteiro e imprima o seu
 //   antecessor e o seu sucessor.
 
+void q6() {
+
+    int numero;
+
+    printf("Digite um número inteiro: ");
+    scanf("%d", &numero);
+
+    int antecessor = numero - 1;
+    int sucessor = numero + 1;
+
+    printf("Antecessor: %d\n", antecessor);
+    printf("Sucessor: %d\n", sucessor);
+
+}
+
 //7. Faça um programa que leia o nome o endereço e o telefone de
 //   um cliente e ao final, imprima esses dados.
+
+void q7() {
+
+char nome[100];
+    char endereco[200];
+    char telefone[15];
+
+    // Leitura dos dados do cliente
+    printf("Digite o nome do cliente: ");
+    fgets(nome, sizeof(nome), stdin);
+
+    printf("Digite o endereço do cliente: ");
+    fgets(endereco, sizeof(endereco), stdin);
+
+    printf("Digite o telefone do cliente: ");
+    fgets(telefone, sizeof(telefone), stdin);
+
+    // Impressão dos dados do cliente
+    printf("\nDados do Cliente:\n");
+    printf("Nome: %s", nome);
+    printf("Endereço: %s", endereco);
+    printf("Telefone: %s", telefone);
+
+
+}
 
 //8. Faça um programa que leia dois números inteiros e imprima a
 //   subtração deles.
@@ -122,6 +162,6 @@ void q5() {
 
 
 int main() {
-q5();
+q7();
     return EXIT_SUCCESS;
 }
