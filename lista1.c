@@ -74,25 +74,21 @@ void q6() {
 
 void q7() {
 
-char nome[100];
-    char endereco[200];
-    char telefone[15];
+    char nome[50], endereco[50], telefone[14];
 
-    // Leitura dos dados do cliente
-    printf("Digite o nome do cliente: ");
-    fgets(nome, sizeof(nome), stdin);
+printf("Nome: ");
+scanf(" %50[^\n]",nome);
 
-    printf("Digite o endereço do cliente: ");
-    fgets(endereco, sizeof(endereco), stdin);
+printf("Endereco:");
+scanf(" %50[^\n]",endereco);
 
-    printf("Digite o telefone do cliente: ");
-    fgets(telefone, sizeof(telefone), stdin);
+printf("Telefone:");
+scanf(" %14[^\n]",telefone);
 
-    // Impressão dos dados do cliente
-    printf("\nDados do Cliente:\n");
-    printf("Nome: %s", nome);
-    printf("Endereço: %s", endereco);
-    printf("Telefone: %s", telefone);
+printf("%s \n %s\n %s\n", nome, endereco, telefone);
+
+
+
 
 }
 
@@ -103,17 +99,17 @@ void q8() {
 
     int num1, num2, resultado;
 
-    // Leitura dos números
+   
     printf("Digite o primeiro número inteiro: ");
     scanf("%d", &num1);
 
     printf("Digite o segundo número inteiro: ");
     scanf("%d", &num2);
 
-    // Cálculo da subtração
+   
     resultado = num1 - num2;
 
-    // Impressão do resultado
+    
     printf("Resultado da subtração: %d\n", resultado);
 
 
@@ -125,14 +121,13 @@ void q9() {
 
 float numero, resultado;
 
-    // Leitura do número real
+    
     printf("Digite um número real: ");
     scanf("%f", &numero);
 
-    // Cálculo de ¼ do número
+   
     resultado = numero / 4;
 
-    // Impressão do resultado
     printf("Um quarto de %.2f é %.2f\n", numero, resultado);
 
 }
@@ -145,7 +140,7 @@ void q10 () {
 
 float num1, num2, num3, media;
 
-    // Leitura dos três números reais
+  
     printf("Digite o primeiro número real: ");
     scanf("%f", &num1);
 
@@ -154,11 +149,9 @@ float num1, num2, num3, media;
 
     printf("Digite o terceiro número real: ");
     scanf("%f", &num3);
-
-    // Cálculo da média aritmética
+   
     media = (num1 + num2 + num3) / 3;
 
-    // Impressão do resultado
     printf("A média aritmética é: %.2f\n", media);
 
 
@@ -170,19 +163,118 @@ float num1, num2, num3, media;
 //    subtração,multiplicação e divisão. Ao final, o programa
 //    deve imprimir os resultados dos cálculos.
 
+void q11() {
+
+double num1, num2;
+    double soma, subtracao, multiplicacao, divisao;
+
+    
+    printf("Digite o primeiro número: ");
+    scanf("%lf", &num1);
+    printf("Digite o segundo número: ");
+    scanf("%lf", &num2);
+
+    
+    soma = num1 + num2;
+    subtracao = num1 - num2;
+    multiplicacao = num1 * num2;
+
+    
+    if (num2 != 0) {
+        divisao = num1 / num2;
+        printf("Divisão: %.2lf\n", divisao);
+    } else {
+        printf("Divisão: indefinida (divisão por zero)\n");
+    }
+
+   
+    printf("Soma: %.2lf\n", soma);
+    printf("Subtração: %.2lf\n", subtracao);
+    printf("Multiplicação: %.2lf\n", multiplicacao);
+
+
+}
+
 //12. Faça um programa que leia um número real e calcule o
 //    quadrado deste número. Ao final, o programa deve
 //    imprimir o resultado do cálculo.
 
+void q12() {
+
+double numero, quadrado;
+
+
+    printf("Digite um número real: ");
+    scanf("%lf", &numero);
+
+    quadrado = numero * numero;
+
+    printf("O quadrado de %.2lf é %.2lf\n", numero, quadrado);
+
+
+}
+
 //13. Faça um programa que leia o saldo de uma conta poupança e
 //    imprima o novo saldo, considerando um reajuste de 2%.
+
+void q13() {
+
+double saldo, total;
+
+printf("Digite seu saldo: ");
+
+scanf("%lf", &saldo);
+
+total = saldo + saldo * 0.02;
+
+printf("Seu saldo ajustado sera:%.2lf\n", total);
+
+
+}
 
 //14. Faça um programa que leia a base e a altura de um retângulo
 //    e imprima o perímetro (base*2 + altura*2) e a área (base * altura).
 
+void q14() {
+
+    double base, altura, perimetro, area;
+
+    printf("Digite a base do retângulo: ");
+    scanf("%lf", &base);
+    printf("Digite a altura do retângulo: ");
+    scanf("%lf", &altura);
+
+    perimetro = base*2 + altura*2;
+    area = base * altura;
+
+    printf("Perímetro do retângulo: %.2lf\n", perimetro);
+    printf("Área do retângulo: %.2lf\n", area);
+
+}
+
 //15. Faça um programa que leia o valor de um produto, o percentual
 //    do desconto desejado e imprima o valor do desconto e o valor
 //    do produto subtraindo o desconto.
+
+void q16() {
+
+
+double valorProduto, percentualDesconto, valorDesconto, valorFinal;
+
+    printf("Digite o valor do produto: ");
+    scanf("%lf", &valorProduto);
+    printf("Digite o percentual de desconto: ");
+    scanf("%lf", &percentualDesconto);
+
+    valorDesconto = percentualDesconto / 100 * valorProduto;
+    valorFinal = valorProduto - valorDesconto;
+
+    printf("Valor do desconto: %.2lf\n", valorDesconto);
+    printf("Valor final do produto: %.2lf\n", valorFinal);
+
+
+
+}
 
 //16. Faça um programa que calcule o reajuste do salário de um
 //    funcionário. Para isso, o programa deverá ler o salário atual
@@ -221,6 +313,6 @@ float num1, num2, num3, media;
 
 
 int main() {
-q10();
+q16();
     return EXIT_SUCCESS;
 }
