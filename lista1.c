@@ -256,7 +256,7 @@ void q14() {
 //    do desconto desejado e imprima o valor do desconto e o valor
 //    do produto subtraindo o desconto.
 
-void q16() {
+void q15() {
 
 
 double valorProduto, percentualDesconto, valorDesconto, valorFinal;
@@ -273,7 +273,6 @@ double valorProduto, percentualDesconto, valorDesconto, valorFinal;
     printf("Valor final do produto: %.2lf\n", valorFinal);
 
 
-
 }
 
 //16. Faça um programa que calcule o reajuste do salário de um
@@ -281,11 +280,44 @@ double valorProduto, percentualDesconto, valorDesconto, valorFinal;
 //    do funcionário e ler o percentual de reajuste. Ao final imprimir
 //    o valor do novo salário.
 
+void q16() {
+
+float salarioatual, percentual, salariofinal, valorpercentual;
+
+    printf("Digite o salario atual: ");
+    scanf("%f", &salarioatual);
+    printf("Digite o percentual de reajuste: ");
+    scanf("%f", &percentual);
+
+    valorpercentual = salarioatual * percentual / 100 ;
+    salariofinal = salarioatual + valorpercentual ;
+
+    printf("Valor do salario final: %.lf reais\n", salariofinal);
+    
+
+}
+
 //17. Faça um programa que calcule a conversão entre graus centígrados
 //    e Fahrenheit. Para isso, leia o valor em centígrados e calcule
 //    com base na fórmula a seguir. Após calcular o programa deve
 //    imprimir o resultado da conversão.
 //    F = (9 x C +160) / 5
+
+void q17() {
+
+
+
+float ce, fa ;
+
+    printf("Digite a temperatura em centigrados: ");
+    scanf("%f", &ce);
+
+    fa=(9 * ce + 160) / 5 ;
+
+    printf(" Temperatura em Fahrenheit sera de: %.lf graus\n", fa);
+
+}
+
 
 //18. Faça um programa que calcule a quantidade de litros de combustível
 //    consumidos em uma viagem, sabendo-se que o carro tem autonomia de
@@ -300,6 +332,28 @@ double valorProduto, percentualDesconto, valorDesconto, valorFinal;
 //    Ao final, o programa deverá imprimir a distância percorrida e a
 //    quantidade de litros consumidos na viagem.
 
+
+void q18() {
+
+ float tempo, velocidade, litros, distancia;
+
+    printf("Qual o tempo de viajem em horas: ");
+    scanf("%f", &tempo);
+    printf("Qual a velocidade nedia em Km/h: ");
+    scanf("%f", &velocidade);
+
+    distancia = tempo * velocidade;
+    litros = distancia / 12;
+
+     printf("Distancia percorrida é de : %.3lf Km\n", distancia);
+     printf("Consumo de combustivel é de : %.3lf\n", litros);
+
+
+    
+}
+
+
+
 //19. Faça um programa que calcule o valor de uma prestação em atraso.
 //    Para isso, o programa deve ler o valor da prestação vencida, a
 //    taxa periódica de juros e o período de atraso. Ao final, o
@@ -307,12 +361,35 @@ double valorProduto, percentualDesconto, valorDesconto, valorFinal;
 //    de atraso, os juros que serão cobrados pelo período de atraso, o
 //    valor da prestação acrescido dos juros. Considere juros simples.
 
+void q19() {
+
+
+float valorvencido, taxadejuros, diasatraso, valor final;
+
+    printf("Digite o valor do boleto vencido: ");
+    scanf("%f", &valorvencido);
+    printf("Digite o valor da taxa de juros diaria: ");
+    scanf("%f", &taxadejuros);
+    printf("Digite a quantidade de dias em atraso: ");
+    scanf("%f", &diasatraso);
+
+    
+    valorfinal = valorvencido + (taxadejuros * diasatraso);
+
+
+
+
+
+}
+
+
+
 //20. Faça um programa que efetue a apresentação do valor da conversão
 //    em real (R$) de um valor lido em dólar (US$). Para isso, será
 //    necessário também ler o valor da cotação do dólar.
 
 
 int main() {
-q16();
+q18();
     return EXIT_SUCCESS;
 }
